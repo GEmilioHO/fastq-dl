@@ -2,6 +2,8 @@
 [![Anaconda-Server Badge](https://anaconda.org/bioconda/fastq-dl/badges/downloads.svg)](https://anaconda.org/bioconda/fastq-dl)
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/rpetit3/fastq-dl)
 
+## This forked version has been modified to skip the download of runs that are already present in the output directory.
+
 # fastq-dl
 
 Download FASTQ files from the [European Nucleotide Archive](https://www.ebi.ac.uk/ena) or the
