@@ -2,7 +2,7 @@
 [![Anaconda-Server Badge](https://anaconda.org/bioconda/fastq-dl/badges/downloads.svg)](https://anaconda.org/bioconda/fastq-dl)
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/rpetit3/fastq-dl)
 
-## This forked version has been modified to skip the download of runs that are already present in the output directory.
+## This forked version has been modified to skip the download of runs that were previously downloaded in the output directory (filenames should be Run Accessions).
 
 # fastq-dl
 
@@ -24,8 +24,9 @@ Runs, users can optionally merge the runs.
 go this route to for installation.
 
 ```{bash}
-conda create -n fastq-dl -c conda-forge -c bioconda fastq-dl
-conda activate fastq-dl 
+conda create -n fastq-dl
+conda activate fastq-dl
+pip install git+https://github.com/GEmilioHO/fastq-dl.git
 ```
 
 ## Usage
