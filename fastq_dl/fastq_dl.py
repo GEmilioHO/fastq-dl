@@ -14,6 +14,9 @@ from executor import ExternalCommand, ExternalCommandFailed
 from pysradb import SRAweb
 from rich.logging import RichHandler
 
+from os import listdir
+from os.path import join, isfile
+
 click.rich_click.USE_RICH_MARKUP = True
 click.rich_click.OPTION_GROUPS = {
     "fastq-dl": [
@@ -588,6 +591,12 @@ def fastqdl(
     downloaded = {}
     runs = {} if group_by_experiment or group_by_sample else None
     outdir = Path.cwd() if outdir == "./" else f"{outdir}"
+
+    downloaded_runs = {run.split("_")[0] if "_" in run else run.split(".")[0] for run in listdir(outdir) if isfile(join(outdir, run)) and ".fastq.gz" in run}
+
+    if len(downloaded_runs) > 0:
+        for run_acc in downloaded_runs:
+            downloaded[run_acc] = True
 
     for i, run_info in enumerate(ena_data):
         run_acc = run_info["run_accession"]
