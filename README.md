@@ -18,11 +18,6 @@ Runs, users can optionally merge the runs.
 
 ## Installation
 
-### Bioconda
-
-`fastq-dl` is available from [Bioconda](https://bioconda.github.io/) and I highly recommend you
-go this route to for installation.
-
 ```{bash}
 conda create -n fastq-dl
 conda activate fastq-dl
