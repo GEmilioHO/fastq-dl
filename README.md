@@ -2,7 +2,7 @@
 [![Anaconda-Server Badge](https://anaconda.org/bioconda/fastq-dl/badges/downloads.svg)](https://anaconda.org/bioconda/fastq-dl)
 [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/rpetit3/fastq-dl)
 
-## This forked version has been modified to prevent downloading runs that had been previously downloaded and exist in the output directory (filenames should be Run Accessions).
+## This forked version has been modified to prevent downloading runs that were previously downloaded and exist in the output directory (filenames should be Run Accessions).
 
 # fastq-dl
 
